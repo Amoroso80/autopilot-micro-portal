@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{CITY_NAME}} — Daily Weather • Autopilot Micro‑Portal</title>
+  <meta name="description" content="Current and 3‑day summary for {{CITY_NAME}}." />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>{{CITY_NAME}}</h1>
+    <p class="muted"><a href="../index.html">← Back</a> • Updated {{TODAY}}</p>
+  </header>
+
+  <main class="container">
+    <section class="city-current">
+      <div class="current-emoji">{{CURR_EMOJI}}</div>
+      <div class="current-val">{{CURR_TEMP}}°C</div>
+      <div class="current-meta">{{CURR_LABEL}} • Wind {{CURR_WIND}} m/s</div>
+    </section>
+
+    <section>
+      <h2>3‑Day Outlook (UTC)</h2>
+      <div class="table">
+        <div class="row head">
+          <div>Date</div><div>Max / Min</div><div>Precip (mm)</div>
+        </div>
+        {{DAILY_ROWS}}
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <nav>
+      <a href="../privacy.html">Privacy</a>
+    </nav>
+  </footer>
+</body>
+</html>
