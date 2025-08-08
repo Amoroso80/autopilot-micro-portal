@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Autopilot Micro‑Portal — Daily Freshness</title>
+  <meta name="description" content="A tiny site that updates itself daily with a photo, quick weather cards, and a quote. 100% free and static." />
+  <link rel="preload" as="image" href="{{PHOTO_URL}}" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>Autopilot Micro‑Portal</h1>
+    <p class="muted">Last updated {{TODAY}} • 100% static • auto‑refreshed daily</p>
+  </header>
+
+  <!-- AD SLOT (top) -->
+  <div class="ad container">
+    <!-- AD_SLOT_TOP: Paste your ad network iframe/snippet here (e.g., A‑ADS). -->
+  </div>
+
+  <main class="container">
+    <section class="photo">
+      <img src="{{PHOTO_URL}}" alt="Photo of the Day" />
+      <div class="caption">Photo of the Day • Courtesy: {{PHOTO_AUTHOR}}</div>
+    </section>
+
+    <section class="grid">
+      <h2>Today’s Quick Weather</h2>
+      <div class="cards">
+        {{CITY_CARDS}}
+      </div>
+      <p class="tip">Times and values shown using UTC for consistency.</p>
+    </section>
+
+    <section class="quote">
+      <blockquote>“{{QUOTE_TEXT}}”</blockquote>
+      <div class="byline">— {{QUOTE_AUTHOR}}</div>
+    </section>
+  </main>
+
+  <!-- AD SLOT (bottom) -->
+  <div class="ad container">
+    <!-- AD_SLOT_BOTTOM: Paste your ad network iframe/snippet here. -->
+  </div>
+
+  <footer class="container">
+    <nav>
+      <a href="./privacy.html">Privacy</a>
+      <a href="https://open-meteo.com/" rel="noopener" target="_blank">Open‑Meteo</a>
+      <a href="https://picsum.photos/" rel="noopener" target="_blank">Picsum</a>
+    </nav>
+    <p class="muted">This site is static and uses no cookies by default.</p>
+  </footer>
+</body>
+</html>

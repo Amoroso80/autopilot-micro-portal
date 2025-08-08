@@ -1,0 +1,9 @@
+{
+  "name": "autopilot-micro-portal",
+  "version": "1.0.0",
+  "description": "Self-updating static site powered by GitHub Actions and free public data sources.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}
